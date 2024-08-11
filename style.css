@@ -14,25 +14,30 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Ensures the logo stays on the left and the navigation links on the right */
     align-items: center;
     padding: 20px 40px;
     background-color: white;
 }
 
 .logo img {
-    width: 110px;
+    width: 120px;
+}
+
+.nav {
+    display: flex; 
+    align-items: center; 
 }
 
 .nav a {
-    text-decoration: none;
-    color: #7c7c7c;
-    font-size: 16px;
-    margin-left: 30px;
+    font-size: 11px; 
+    margin: 10px; 
+    text-decoration: none; 
+    color: #7c7c7c; 
 }
 
 .nav a:hover {
-    color: #333;
+    color: #333; 
 }
 
 .hero {
@@ -43,7 +48,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1100px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 40px;
 }
@@ -74,8 +79,9 @@ header {
     padding: 10px;
     font-size: 16px;
     flex: 2;
-    border-radius: 25px;
-    border: 1px solid #ddd;
+    border-radius: 5px;
+    border: 2px solid #575454;
+    max-width: 350px;
 }
 
 .email-form button {
@@ -83,9 +89,10 @@ header {
     background-color: #3b4bfd;
     color: white;
     border: none;
-    border-radius: 25px;
+    border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    width: 190px;
 }
 
 .email-form button:hover {
@@ -93,8 +100,9 @@ header {
 }
 
 .image img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
+    margin-left: 200px;
 }
 
 .productivity-section {
@@ -169,54 +177,63 @@ header {
 }
 
 .image-content img {
-    max-width: 100%;
+    max-width: 80%;
     height: auto;
+    margin-left: 150px;
 }
 
-.form {
-    background-color: #585CFF;
+.early-access {
+    background-color: #4A5178;
     padding: 50px 0;
+    color: white;
 }
 
-.earlyaccess h1 {
-    font-size: 28px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.earlyaccess p {
-    font-size: 16px;
-    color: #ffffff;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.input-group {
-    display: flex;
-    max-width: 600px;
+.containerone {
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.input-group input[type="email"] {
-    flex: 3;
+.text-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.text-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+.form-section {
+    display: flex;
+    align-items: center;
+}
+
+.form-section input[type="email"] {
     padding: 15px;
-    border-radius: 25px;
     border: none;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
     font-size: 16px;
 }
 
-.input-group button {
-    flex: 1;
-    padding: 15px;
-    background-color: #3b4bfd;
+.form-section button {
+    padding: 15px 20px;
+    background-color: #3D65E4;
     color: white;
     border: none;
-    border-radius: 25px;
-    cursor: pointer;
+    border-radius: 5px;
     font-size: 16px;
-    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-section button:hover {
+    background-color: #3456C0;
 }
 
 .footer {
@@ -238,10 +255,12 @@ header {
     color: #b0b3c2;
     margin-bottom: 10px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.footer-left p img {
+.footer-leftcontact p img {
     margin-right: 10px;
 }
 
@@ -288,21 +307,15 @@ header {
         align-items: flex-start;
     }
 
-    .logo img {
-       max-width: 70px;
-    }
-
     .nav {
         display: flex;
-        flex-direction: row;
-        align-items: flex-end;
+        flex-direction: column;
+        align-items: flex-start;
         width: 100%;
-        font-size: 5px;
     }
 
     .nav a {
-        margin: 0 10px;
-        
+        margin: 10px 0;
     }
 
     .container {
@@ -340,16 +353,25 @@ header {
 /* For Mobile Phones (max-width: 480px) */
 @media (max-width: 480px) {
     header {
+        flex-direction: row; /* Ensures logo and nav are on the same row */
         padding: 10px 20px;
+        justify-content: space-between; /* Keeps logo on the left and nav on the right */
     }
 
     .logo img {
-        width: 100px;
+        width: 100px; /* Smaller logo size for mobile */
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: row; /* Nav links stay in a row */
+        justify-content: flex-end; /* Aligns nav links to the right */
+        width: auto; /* Keeps nav links visible on the right side */
     }
 
     .nav a {
-        font-size: 14px;
-        margin-left: 20px;
+        font-size: 12px; /* Smaller font size for mobile */
+        margin: 5px; /* Adjusted margin for smaller screens */
     }
 
     .container {
