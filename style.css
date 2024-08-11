@@ -281,7 +281,10 @@ header {
     flex-direction: column;
     gap: 20px;
     margin-left: 150px;
-    
+}
+
+.footer-linktwo a{
+    text-decoration: none;
 }
 
 .social-icon{
